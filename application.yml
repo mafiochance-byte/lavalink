@@ -1,5 +1,5 @@
 server:
-  port: 7860  # BẮT BUỘC TRÊN HUGGING FACE
+  port: 8080  # BẮT BUỘC TRÊN HUGGING FACE
   address: 0.0.0.0
   http2:
     enabled: true
