@@ -1,0 +1,20 @@
+# Sử dụng base image nhẹ
+FROM openjdk:17-jdk-slim
+
+# Cài đặt wget
+RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Tải Lavalink về trong quá trình build (nó sẽ tải trên server của Railway, không tốn dung lượng của ông)
+RUN wget -O Lavalink.jar https://github.com/lavalink-devs/Lavalink/releases/latest/download/Lavalink.jar
+
+# Tạo folder plugins và tải youtube-plugin
+RUN mkdir -p plugins && \
+    wget -O plugins/youtube-plugin.jar https://github.com/lavalink-devs/youtube-source/releases/download/1.18.1/youtube-plugin-1.18.1.jar
+
+# Copy file application.yml (cái này nhẹ, ông nên để trong repo)
+COPY application.yml /app/application.yml
+
+# Khởi chạy
+CMD ["java", "-Xmx768m", "-jar", "Lavalink.jar"]

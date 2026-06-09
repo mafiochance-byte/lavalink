@@ -1,0 +1,32 @@
+server:
+  port: 7860  # BẮT BUỘC TRÊN HUGGING FACE
+  address: 0.0.0.0
+  http2:
+    enabled: true
+
+lavalink:
+  pluginsDir: "./plugins"
+  server:
+    password: "Duc thinh 1234 @" # Đổi ngay!
+    sources:
+      youtube: false # Vẫn phải dùng plugin ngoài
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      nico: true
+      http: true
+      local: false
+    filters:
+      allFilters: true
+    resamplingQuality: HIGH
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    trackStuckThresholdMs: 10000
+
+logging:
+  file:
+    path: ./logs/
+  level:
+    root: INFO
