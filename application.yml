@@ -7,7 +7,7 @@ server:
 lavalink:
   pluginsDir: "./plugins"
   server:
-    password: "Duc thinh 1234 @" # Đổi ngay!
+    password: "Ducthinh1234//" # Đổi ngay!
     sources:
       youtube: false # Vẫn phải dùng plugin ngoài
       bandcamp: true
