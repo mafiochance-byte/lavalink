@@ -1,5 +1,5 @@
 # Sử dụng base image nhẹ
-FROM openjdk:17-jdk-slim-jammy
+FROM eclipse-temurin:17-jdk-jammy
 
 # Cài đặt wget
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
